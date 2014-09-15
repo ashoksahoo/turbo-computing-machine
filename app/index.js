@@ -7,7 +7,7 @@ var encode32 = require("encode32");
 
 
 router.get('/', function (req, res) {
-	var number = Math.floor((Math.random() * 1064000000) + 36000000);
+	var number = Math.floor((Math.random() * 1035000000) + 35000000);
 	var code = encode32.encode(number);
 	var decoded = encode32.decode(code);
 	res.render('index', {title: 'Express', number:number, code: code, decoded: decoded});
